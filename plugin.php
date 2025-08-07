@@ -16,14 +16,8 @@ Copyright (c) 2025 SeanChDavis
 class SCHD_Page_Collections extends PM_Plugin
 {
     public $title = 'Page Collection';
+    public $name = 'Page Collection';
     public $type = 'box';
-    public $custodians = array(
-        'Page_Container' => array(
-            'title'   => 'Page Collection',
-            'order'   => 10,
-            'startup' => true
-        ),
-    );
 
     /**
      * Creates 'Page Collections' content type in the 'theme' environment
