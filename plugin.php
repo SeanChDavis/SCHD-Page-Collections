@@ -4,7 +4,7 @@
 Name: Page Collections
 Author: SeanChDavis
 Description: Create collections of pages that can be displayed on the frontend.
-Version: 0.1
+Version: 0.1.1
 Requires: 0.1
 Class: SCHD_Page_Collections
 Docs:
