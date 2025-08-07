@@ -68,7 +68,7 @@ class SCHD_Page_Collections extends PM_Plugin
         if (empty($collections)) {
             $fields['no-collections'] = array(
                 'type' => 'custom',
-                'html' => '<div class="callout note" style="max-width:720px"><p style="margin-bottom: .25rem;">Please create a new Page Collection from the <a href="'.$motor->admin_url().'content/">Content Types</a> page to get started.</p></div>',
+                'html' => '<div class="callout note" style="max-width:720px"><p style="margin-bottom: .25rem;">Please create a new Page Collection from the <a href="'.$motor->admin_url('content').'">Content Types</a> page to get started.</p></div>',
             );
         } else { // Sweet, we have collections!
 
@@ -76,7 +76,7 @@ class SCHD_Page_Collections extends PM_Plugin
             $fields = [
                 'description' => array(
                     'type' => 'custom',
-                    'html' => '<div style="max-width:720px"><p style="margin-bottom: 1.25rem;">Each field represents a Page Collection. To include pages in a collection, enter comma-separated page IDs. For example, to include pages with IDs 3 and 5, enter <code>3,5</code>.</p><p>For reference, a list of live pages and their IDs are at the bottom of this page. To create more Page Collections, visit the <a href="'.$motor->admin_url().'content/">Content Types</a> page. Control the display of your Page Collections from the <a href="'.$motor->admin_url().'theme/editor/">Template Editor</a>.</p></div>',
+                    'html' => '<div style="max-width:720px"><p style="margin-bottom: 1.25rem;">Each field represents a Page Collection. To include pages in a collection, enter comma-separated page IDs. For example, to include pages with IDs 3 and 5, enter <code>3,5</code>.</p><p>For reference, a list of live pages and their IDs are at the bottom of this page. To create more Page Collections, visit the <a href="'.$motor->admin_url('content').'">Content Types</a> page. Control the display of your Page Collections from the <a href="'.$motor->admin_url('theme/editor').'">Template Editor</a>.</p></div>',
                 )
             ];
 
@@ -89,7 +89,7 @@ class SCHD_Page_Collections extends PM_Plugin
                     'placeholder' => '3,5',
                     'width'       => 'large',
                     'description' => 'Page Collection ID: '.$collection['id'].
-                                     ' | <a href="'.$motor->url().$collection['slug'].'/" target="_blank">View Page Collection</a>',
+                                     ' | <a href="'.$motor->url($collection['slug']).'" target="_blank">View Page Collection</a>',
                 );
             }
 
